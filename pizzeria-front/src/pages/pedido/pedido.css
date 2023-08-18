@@ -1,6 +1,4 @@
-.subtitulo{
-    color:rgb(130, 129, 129);
-}
+
 .subrayado {
     border-bottom: 5px solid rgb(164, 164, 164); /* Grosor y color del subrayado */
     /* display: inline-block; Hace que el div se comporte como un elemento en línea */
@@ -10,7 +8,7 @@
 .titulo-producto-carrito {
 	font-size: 20px;
     padding-left: 4px;
-
+	color:rgb(130, 129, 129);
 }
 
 .precio-producto-carrito {
@@ -39,10 +37,6 @@
 	padding: 10px;
 
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.image{
-    width:30%;
-    height:30%;
 }
 
 button {
@@ -75,4 +69,13 @@ button {
    
    button:active {
 	box-shadow: none;
+   }
+
+   @media screen and (max-width: 1100px)  { 
+
+		.titulo-producto-carrito {
+			font-size: 15px;
+		
+		}
+
    }

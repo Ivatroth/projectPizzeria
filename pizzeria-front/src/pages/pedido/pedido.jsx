@@ -45,9 +45,9 @@ export default function Pedido() {
       <div className='container'>
         <div className='row pt-5'>
           {/* lista */}
-          <div className='col-7 pt-3'>
+          <div className='col-12 pt-3 col-lg-7'>
             {/* cabecera */}
-            <div className='row subtitulo subrayado titulo-producto-carrito'>
+            <div className='row subrayado titulo-producto-carrito'>
                 <div className='col col-md-1'> </div>
                 <div className='col col-md-5'>PRODUCTO</div>
                 <div className='col col-md-2'>PRECIO</div>
@@ -58,7 +58,7 @@ export default function Pedido() {
             <div className='row d-flex align-items-center titulo-producto-carrito py-2'>
               {carrito.map(product => (
                   <>
-                  <div className='col col-md-1 py-4'>
+                  <div className='col-1 col-md-1 py-4'>
                       <svg
                           xmlns='http://www.w3.org/2000/svg'
                           fill='none'
@@ -75,9 +75,12 @@ export default function Pedido() {
                           />
                       </svg>
                   </div>
-                  <div className='col col-md-5'>
-                    <img src={product.img} alt={product.name} style={{ width: '20%', height: '80%', objectFit: 'cover' }} />
-                    <span className='px-3'>{product.name}</span>
+                  <div className='col-5 col-md-5'>
+                    <div className='row d-flex align-items-center'>
+                      <img className='col' src={product.img} alt={product.name} style={{ width: '20%', height: '80%', objectFit: 'cover' }} />
+                      <span className='px-3 col'>{product.name}</span>
+                    </div>
+                    
                   </div>
                   <div className='col col-md-2'>
                     <span>$ {product.price}</span>
@@ -102,9 +105,9 @@ export default function Pedido() {
 
             </div>
           </div>
-          <div className='col-1'></div>
+          <div className='col-12 col-lg-1'></div>
           {/* total */}
-          <div className='col-4 border shadow pt-3 px-5'>
+          <div className='col-12 border shadow pt-3 px-5 col-lg-4'>
             {/* cabecera */}
             <div className='row subtitulo titulo-producto-carrito'>
               <div className='col col-md-12 subrayado'>TOTAL DEL CARRITO</div>

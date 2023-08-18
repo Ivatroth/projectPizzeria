@@ -27,8 +27,18 @@
       max-width: 100%;
     }
 
-    input {
+    /* input {
       width: 61vw;
+      margin-top: 2vh;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    } */
+  }
+
+  @media screen and (max-width: 1050px) { 
+      input {
+      width: 350px;
       margin-top: 2vh;
       -webkit-appearance: none;
       -moz-appearance: none;

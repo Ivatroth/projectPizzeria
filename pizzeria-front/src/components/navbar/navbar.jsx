@@ -8,15 +8,15 @@ function NavBar({ handleSubmit, carrito, countProducts, totalCarr }) {
 
   return (
     <div>
-        <nav className='d-flex align-items-center justify-content-between h5 flex-wrap mi-div pt-3'>
+        <nav className='d-flex align-items-center justify-content-between h5 mi-div pt-3'>
           <div className='p-2'>
 
             <Link to='/'><img className='logo' src='./logo.jpg' alt='Logo'/></Link>
           </div>
-          <div className='color-text'>
+          <div className='color-text search'>
             <Search handleSubmit={handleSubmit}/>
           </div>
-          <div>
+          <div className='redes'>
             <i class="col bi bi-twitter px-2"></i>
             <i class="col bi bi-facebook px-2"></i>
             <i class="col bi bi-instagram px-2"></i>

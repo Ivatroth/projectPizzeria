@@ -12,6 +12,7 @@ export default function Carrito() {
     const totalCarr = useSelector((state)=> state.totalCarr)
     const countProducts = useSelector((state)=> state.countProducts)
     const [active, setActive] = useState(false);
+    const anchoPantalla = window.innerWidth;
 
 	const onDeleteProduct = product => {
 		const results = carrito.filter(
@@ -28,9 +29,10 @@ export default function Carrito() {
 
   return (
     <div className='container-icon'>
+    <Link to={anchoPantalla <= 765 ? '/pedido' : ''}>
     <div
         className='container-cart-icon'
-        onClick={() => setActive(!active)}
+        onClick={()=> setActive(!active)}
     >
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -50,10 +52,10 @@ export default function Carrito() {
         <div className='count-products'>
             <span id='contador-productos'>{countProducts}</span>
         </div>
-    </div>
+    </div></Link>
 
     <div
-        className={`container-cart-products ${
+        className={`cart-active container-cart-products ${
             active ? '' : 'hidden-cart'
         }`}
     >

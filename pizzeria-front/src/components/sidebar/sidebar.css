@@ -1,8 +1,8 @@
 .active{
     --bs-accordion-active-bg: #f9e376;
 }
-
-@media (max-width: 767px) {
+/* cuando el ancho de la ventana del navegador es igual o inferior a 767 píxeles */
+@media screen and (max-width: 767px) {
     .mi-div {
       display: flex;
       flex-direction: column;

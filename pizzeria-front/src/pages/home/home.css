@@ -1,0 +1,10 @@
+/* cuando el ancho de la ventana del navegador es igual o inferior a 480 píxeles */
+@media screen and (max-width: 767px){
+
+.mi-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+} 

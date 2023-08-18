@@ -33,27 +33,24 @@ function Home() {
   } 
 
   return (
-    <div className='container-fluid my-2'>
-      <div className='col'>
+    <div className='container-fluid m-2'>
+
         <NavBar handlerSubmit={handleInputChange} />
-
-        <div className='row'>
-          <div className='col-md-3 col-12'>
-            <Sidebar className="container-fluid"
-              handleClickComboXTipo={handleClickComboXTipo} 
-              handleClickProdXCate={handleClickProdXCate}
-              allCategorias={allCategorias}
-              allTiposCombos={allTiposCombos}
-              handleClickCombo={handleClickCombo} 
-              handleClickCate={handleClickCate}
-
-              />
-          </div>
-          <div className='col-md-9 col-12 mt-3'> 
-            <Cards elegidos ={elegidos} />
-          </div>
+        <div className='row text-center mi-div'>
+        <div className='col-md-3 col-sm-12'>
+            <Sidebar 
+                handleClickComboXTipo={handleClickComboXTipo} 
+                handleClickProdXCate={handleClickProdXCate}
+                allCategorias={allCategorias}
+                allTiposCombos={allTiposCombos}
+                handleClickCombo={handleClickCombo} 
+                handleClickCate={handleClickCate}
+                />          
         </div>
-      </div>
+        <div className='col col-md-9 col-sm-12 mt-3'>
+            <Cards  elegidos ={elegidos} />
+        </div>
+        </div>  
     </div>
   );
 }

@@ -4,7 +4,7 @@ function Sidebar({handleClickCombo, handleClickCate, allTiposCombos, allCategori
 
   return (
 
-    <div class="position-relative container-fluid mt-3 text-large mi-div">
+    <div class="mt-3 text-large mi-div">
       <div class="row">
         {/* Boton de Combos */}
         <button type='button' className='btn btn-outline-warning my-2 btn-lg' onClick={handleClickCombo}>Combos</button>

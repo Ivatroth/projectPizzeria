@@ -5,8 +5,20 @@
   width: 250px;
   height: 50px;
 }
+
+@media screen and (max-width: 879px) {
+  .redes{
+    display: none;
+  }
+} 
 @media (max-width: 767px) {
-    .logo {
+
+      .logo{
+        width: 180px;
+        height: 40px;
+      }
+
+    .search {
       display: none;
     }
     .mi-div {
