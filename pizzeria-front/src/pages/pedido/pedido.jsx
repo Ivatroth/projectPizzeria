@@ -48,7 +48,7 @@ export default function Pedido() {
           <div className='col-12 pt-3 col-lg-7'>
             {/* cabecera */}
             <div className='row subrayado titulo-producto-carrito'>
-                <div className='col col-md-1'> </div>
+                {/* <div className='col col-md-1'>X</div> */}
                 <div className='col col-md-5'>PRODUCTO</div>
                 <div className='col col-md-2'>PRECIO</div>
                 <div className='col col-md-2'>CANTIDAD</div>
@@ -58,26 +58,12 @@ export default function Pedido() {
             <div className='row d-flex align-items-center titulo-producto-carrito py-2'>
               {carrito.map(product => (
                   <>
-                  <div className='col-1 col-md-1 py-4'>
-                      <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          fill='none'
-                          viewBox='0 0 24 24'
-                          strokeWidth='1.5'
-                          stroke='currentColor'
-                          className='icon-close'
-                          onClick={() => onDeleteProduct(product)}
-                      >
-                          <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              d='M6 18L18 6M6 6l12 12'
-                          />
-                      </svg>
-                  </div>
                   <div className='col-5 col-md-5'>
+
                     <div className='row d-flex align-items-center'>
-                      <img className='col' src={product.img} alt={product.name} style={{ width: '20%', height: '80%', objectFit: 'cover' }} />
+                      <i class="col bi bi-x-circle-fill" onClick={() => onDeleteProduct(product)}></i>
+
+                      <img className='col imagen' src={product.img} alt={product.name} style={{ width: '20%', height: '80%', objectFit: 'cover' }} />
                       <span className='px-3 col'>{product.name}</span>
                     </div>
                     

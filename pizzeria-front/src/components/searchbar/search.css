@@ -22,19 +22,6 @@
   .glass:hover {
     cursor: pointer;
   }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    * {
-      max-width: 100%;
-    }
-
-    /* input {
-      width: 61vw;
-      margin-top: 2vh;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    } */
-  }
 
   @media screen and (max-width: 1050px) { 
       input {
