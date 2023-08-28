@@ -4,20 +4,24 @@ import Cards from '../../components/cards/cards';
 import NavBar from '../../components/navbar/navbar';
 import './home.css';
 import { getCombosXTipo, getProductXCat, getProducts, getCombos, getProductXName } from '../../redux/actions';
+import { useState } from 'react';
 
 function Home() {
   const dispatch = useDispatch();
   const allCategorias = useSelector((state)=> state.allCategorias)
   const allTiposCombos = useSelector((state)=> state.allTiposCombos)
   const elegidos = useSelector((state)=> state.elegidos)
+  const [nameElegido, setNameElegido] = useState('Listado de Todos los Combos')
 
 
   const handleClickCate=(e)=>{
     dispatch(getProducts(e.target.value))
+    setNameElegido('Listado de Todos los Productos')
   }
 
   const handleClickCombo=(e)=>{
     dispatch(getCombos(e.target.value))
+    setNameElegido('Listado de Todos los Combos')
   }
 
   const handleClickComboXTipo = (e)=>{
@@ -48,7 +52,7 @@ function Home() {
                 />          
         </div>
         <div className='col col-md-9 col-sm-12 mt-3'>
-            <Cards  elegidos ={elegidos} />
+            <Cards  elegidos ={elegidos} nameElegido={nameElegido}/>
         </div>
         </div>  
     </div>

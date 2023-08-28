@@ -1,0 +1,9 @@
+.titulo{
+    font-size:xx-large;
+}
+@media screen and (max-width: 767px){
+
+    .titulo {
+        font-size: x-small;
+    }
+    } 

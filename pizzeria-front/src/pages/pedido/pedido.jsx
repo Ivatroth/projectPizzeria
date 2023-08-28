@@ -50,7 +50,7 @@ export default function Pedido() {
             <div className='row subrayado titulo-producto-carrito'>
                 {/* <div className='col col-md-1'>X</div> */}
                 <div className='col col-md-5'>PRODUCTO</div>
-                <div className='col col-md-2'>PRECIO</div>
+                <div className='col col-md-2 precio'>PRECIO</div>
                 <div className='col col-md-2'>CANTIDAD</div>
                 <div className='col col-md-2'>SUBTOTAL</div>
             </div>
@@ -58,17 +58,16 @@ export default function Pedido() {
             <div className='row d-flex align-items-center titulo-producto-carrito py-2'>
               {carrito.map(product => (
                   <>
-                  <div className='col-5 col-md-5'>
+                  <div className='col col-5 col-md-5'>
 
                     <div className='row d-flex align-items-center'>
                       <i class="col bi bi-x-circle-fill" onClick={() => onDeleteProduct(product)}></i>
-
                       <img className='col imagen' src={product.img} alt={product.name} style={{ width: '20%', height: '80%', objectFit: 'cover' }} />
                       <span className='px-3 col'>{product.name}</span>
                     </div>
                     
                   </div>
-                  <div className='col col-md-2'>
+                  <div className='col col-md-2 precio'>
                     <span>$ {product.price}</span>
                   </div>
                   <div className='col col-md-2'>

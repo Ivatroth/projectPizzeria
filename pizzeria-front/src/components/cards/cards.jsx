@@ -1,9 +1,10 @@
 import Cardd from "../card/card"
 
-export default function Cards({elegidos}) {
+export default function Cards({elegidos, nameElegido}) {
  
   return (
     <div className="container-fluid">
+      <p className="text-secondary">{nameElegido}</p>
       <div className="row d-flex justify-content-evenly align-items-center">
 
           {elegidos?.map((prod)=>{
